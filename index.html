@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <style>
+      #popup-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      #popup-box {
+        background: #333;
+        padding: 30px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        font-family: Arial, sans-serif;
+        position: relative;
+      }
+
+      #popup-box input, #popup-box select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #popup-box button {
+        background: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .social-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .spotify { background-color: #1DB954; }
+      .facebook { background-color: #3B5998; }
+    </style>
+  </head>
+  <body>
+    <div id="popup-container">
+      <div id="popup-box">
+        <div class="close-btn" onclick="document.getElementById('popup-container').style.display='none'">×</div>
+        <h2>KODAK BLACK</h2>
+        <p>STAY CONNECTED</p>
+        <a class="social-btn spotify" href="#" target="_blank">Spotify</a>
+        <a class="social-btn facebook" href="#" target="_blank">Facebook</a>
+        <input type="email" placeholder="Email" required />
+        <select required>
+          <option value="">Choose Country</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>United Kingdom</option>
+          <!-- Add more countries as needed -->
+        </select>
+        <label><input type="checkbox" /> Kodak Black</label><br />
+        <label><input type="checkbox" /> Capitol Music Group</label><br /><br />
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <script>
+      // Auto-show popup on page load
+      window.onload = function() {
+        document.getElementById('popup-container').style.display = 'flex';
+      }
+    </script>
+  </body>
+</html>
